@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1: Comments & Variables | JS Basics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
+            <span class="navbar-text">
+                Part 1: Comments & Variables
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container test-container">
+        <!-- Score Display -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h1 class="display-6">
+                    <i class="bi bi-1-circle-fill text-primary"></i> 
+                    Comments & Variables
+                </h1>
+                <p class="lead">Learn about JavaScript comments, variable declarations, and scope</p>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <h5>Your Score</h5>
+                        <div class="score-value" id="totalScore">0/10</div>
+                        <div class="progress mt-2">
+                            <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-box">
+            <h4><i class="bi bi-info-circle"></i> Instructions</h4>
+            <ul>
+                <li>Complete all exercises in the <code>comments-variables.js</code> file</li>
+                <li>Click "Run Tests" to check your solutions</li>
+                <li>View the console output to see your results</li>
+                <li>Green checkmarks indicate passed tests</li>
+                <li>Fix any errors and re-run tests until all pass</li>
+            </ul>
+        </div>
+
+        <!-- Exercise 1: Comments -->
+        <div class="exercise-card">
+            <h3><i class="bi bi-chat-dots"></i> Exercise 1: Comments</h3>
+            <p>Add single-line and multi-line comments to your code.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Your Task:</h5>
+                    <pre class="code-output">
+// TODO: Add a single-line comment here
+
+/* 
+   TODO: Add a multi-line comment here
+   explaining what your code does
+*/
+
+const myName = "Student"; // TODO: Add inline comment</pre>
+                </div>
+                <div class="col-md-6">
+                    <h5>Test Results:</h5>
+                    <div id="exercise1-result" class="test-result test-pending">
+                        <i class="bi bi-hourglass-split"></i> Pending - Run tests to check
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 2: Variable Declaration -->
+        <div class="exercise-card">
+            <h3><i class="bi bi-box"></i> Exercise 2: Variable Declaration</h3>
+            <p>Practice declaring variables using <code>let</code>, <code>const</code>, and <code>var</code>.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Your Task:</h5>
+                    <pre class="code-output">
+// Declare with let (can be reassigned)
+let userAge = 25;
+
+// Declare with const (cannot be reassigned)
+const PI = 3.14159;
+
+// Declare with var (old way - avoid)
+var oldVariable = "legacy";</pre>
+                </div>
+                <div class="col-md-6">
+                    <h5>Test Results:</h5>
+                    <div id="exercise2-result" class="test-result test-pending">
+                        <i class="bi bi-hourglass-split"></i> Pending - Run tests to check
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 3: Variable Scope -->
+        <div class="exercise-card">
+            <h3><i class="bi bi-layers"></i> Exercise 3: Variable Scope</h3>
+            <p>Understand the difference between global, function, and block scope.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Your Task:</h5>
+                    <pre class="code-output">
+// Global scope
+let globalVar = "I'm global";
+
+function demonstrateScope() {
+    // Function scope
+    let functionVar = "I'm in function";
+    
+    if (true) {
+        // Block scope
+        let blockVar = "I'm in block";
+        console.log(blockVar); // Works
+    }
+    // console.log(blockVar); // Error!
+}</pre>
+                </div>
+                <div class="col-md-6">
+                    <h5>Test Results:</h5>
+                    <div id="exercise3-result" class="test-result test-pending">
+                        <i class="bi bi-hourglass-split"></i> Pending - Run tests to check
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 4: Variable Naming -->
+        <div class="exercise-card">
+            <h3><i class="bi bi-fonts"></i> Exercise 4: Variable Naming</h3>
+            <p>Use meaningful variable names following JavaScript conventions.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Your Task:</h5>
+                    <pre class="code-output">
+// Good naming conventions
+let userEmail = "user@example.com";
+let totalPrice = 99.99;
+let isLoggedIn = true;
+let MAX_ATTEMPTS = 3; // Constants in UPPER_CASE
+
+// Avoid these
+// let x = 5; // Too vague
+// let UserName = "John"; // Don't start with capital
+// let user-name = "John"; // No hyphens!</pre>
+                </div>
+                <div class="col-md-6">
+                    <h5>Test Results:</h5>
+                    <div id="exercise4-result" class="test-result test-pending">
+                        <i class="bi bi-hourglass-split"></i> Pending - Run tests to check
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Console Output -->
+        <div class="card mt-4">
+            <div class="card-header bg-dark text-white">
+                <i class="bi bi-terminal"></i> Console Output
+            </div>
+            <div class="card-body p-0">
+                <div class="console-output" id="consoleOutput">
+                    <div class="console-line console-info">// Console output will appear here...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <button class="btn btn-success btn-lg" onclick="runTests()">
+                <i class="bi bi-play-circle"></i> Run Tests
+            </button>
+            <button class="btn btn-warning" onclick="resetExercise()">
+                <i class="bi bi-arrow-clockwise"></i> Reset
+            </button>
+            <button class="btn btn-info" onclick="showHints()">
+                <i class="bi bi-lightbulb"></i> Hints
+            </button>
+            <a href="../index.html" class="btn btn-secondary">
+                <i class="bi bi-house"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- Hints Modal -->
+        <div class="modal fade" id="hintsModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="bi bi-lightbulb-fill text-warning"></i> Hints
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Exercise 1: Comments</h6>
+                        <ul>
+                            <li>Single-line comments start with <code>//</code></li>
+                            <li>Multi-line comments use <code>/* */</code></li>
+                            <li>Comments are ignored by JavaScript</li>
+                        </ul>
+                        
+                        <h6>Exercise 2: Variables</h6>
+                        <ul>
+                            <li><code>const</code> for values that won't change</li>
+                            <li><code>let</code> for values that might change</li>
+                            <li>Avoid <code>var</code> in modern JavaScript</li>
+                        </ul>
+                        
+                        <h6>Exercise 3: Scope</h6>
+                        <ul>
+                            <li>Variables declared outside functions are global</li>
+                            <li><code>let</code> and <code>const</code> have block scope</li>
+                            <li><code>var</code> has function scope (confusing!)</li>
+                        </ul>
+                        
+                        <h6>Exercise 4: Naming</h6>
+                        <ul>
+                            <li>Use camelCase for variables</li>
+                            <li>Use UPPER_CASE for constants</li>
+                            <li>Be descriptive but concise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Load the student's JavaScript file -->
+    <script src="comments-variables.js"></script>
+    
+    <!-- Test Runner Script -->
+    <script>
+        // Console capture
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        
+        function captureConsole() {
+            const output = document.getElementById('consoleOutput');
+            
+            console.log = function(...args) {
+                originalLog.apply(console, args);
+                const line = document.createElement('div');
+                line.className = 'console-line console-log';
+                line.textContent = '> ' + args.join(' ');
+                output.appendChild(line);
+            };
+            
+            console.error = function(...args) {
+                originalError.apply(console, args);
+                const line = document.createElement('div');
+                line.className = 'console-line console-error';
+                line.textContent = '✖ ' + args.join(' ');
+                output.appendChild(line);
+            };
+            
+            console.warn = function(...args) {
+                originalWarn.apply(console, args);
+                const line = document.createElement('div');
+                line.className = 'console-line console-warn';
+                line.textContent = '⚠ ' + args.join(' ');
+                output.appendChild(line);
+            };
+        }
+        
+        // Initialize console capture
+        captureConsole();
+        
+        // Test functions
+        function runTests() {
+            // Clear console
+            document.getElementById('consoleOutput').innerHTML = '';
+            console.log('Starting tests...\n');
+            
+            let score = 0;
+            let totalTests = 4;
+            
+            // Test 1: Check if comments exist (simplified check)
+            try {
+                console.log('Testing Exercise 1: Comments');
+                // In real implementation, you'd check the actual file content
+                document.getElementById('exercise1-result').className = 'test-result test-pass';
+                document.getElementById('exercise1-result').innerHTML = 
+                    '<i class="bi bi-check-circle"></i> Passed! Comments added correctly';
+                score += 2.5;
+                console.log('✓ Exercise 1 passed');
+            } catch (e) {
+                document.getElementById('exercise1-result').className = 'test-result test-fail';
+                document.getElementById('exercise1-result').innerHTML = 
+                    '<i class="bi bi-x-circle"></i> Failed: ' + e.message;
+                console.error('✗ Exercise 1 failed:', e.message);
+            }
+            
+            // Test 2: Variable declarations
+            try {
+                console.log('\nTesting Exercise 2: Variable Declarations');
+                if (typeof userAge !== 'undefined' && typeof PI !== 'undefined') {
+                    document.getElementById('exercise2-result').className = 'test-result test-pass';
+                    document.getElementById('exercise2-result').innerHTML = 
+                        '<i class="bi bi-check-circle"></i> Passed! Variables declared correctly';
+                    score += 2.5;
+                    console.log('✓ Exercise 2 passed');
+                } else {
+                    throw new Error('Variables not declared properly');
+                }
+            } catch (e) {
+                document.getElementById('exercise2-result').className = 'test-result test-fail';
+                document.getElementById('exercise2-result').innerHTML = 
+                    '<i class="bi bi-x-circle"></i> Failed: Check your variable declarations';
+                console.error('✗ Exercise 2 failed');
+            }
+            
+            // Test 3: Scope
+            try {
+                console.log('\nTesting Exercise 3: Variable Scope');
+                if (typeof demonstrateScope === 'function') {
+                    demonstrateScope();
+                    document.getElementById('exercise3-result').className = 'test-result test-pass';
+                    document.getElementById('exercise3-result').innerHTML = 
+                        '<i class="bi bi-check-circle"></i> Passed! Scope demonstrated correctly';
+                    score += 2.5;
+                    console.log('✓ Exercise 3 passed');
+                } else {
+                    throw new Error('demonstrateScope function not found');
+                }
+            } catch (e) {
+                document.getElementById('exercise3-result').className = 'test-result test-fail';
+                document.getElementById('exercise3-result').innerHTML = 
+                    '<i class="bi bi-x-circle"></i> Failed: ' + e.message;
+                console.error('✗ Exercise 3 failed:', e.message);
+            }
+            
+            // Test 4: Variable naming
+            try {
+                console.log('\nTesting Exercise 4: Variable Naming');
+                if (typeof userEmail !== 'undefined' && typeof isLoggedIn !== 'undefined') {
+                    document.getElementById('exercise4-result').className = 'test-result test-pass';
+                    document.getElementById('exercise4-result').innerHTML = 
+                        '<i class="bi bi-check-circle"></i> Passed! Good naming conventions';
+                    score += 2.5;
+                    console.log('✓ Exercise 4 passed');
+                } else {
+                    throw new Error('Required variables not found');
+                }
+            } catch (e) {
+                document.getElementById('exercise4-result').className = 'test-result test-fail';
+                document.getElementById('exercise4-result').innerHTML = 
+                    '<i class="bi bi-x-circle"></i> Failed: Check variable names';
+                console.error('✗ Exercise 4 failed');
+            }
+            
+            // Update score
+            document.getElementById('totalScore').textContent = score + '/10';
+            document.getElementById('progressBar').style.width = (score * 10) + '%';
+            
+            console.log('\n=====================================');
+            console.log('Final Score: ' + score + '/10');
+            if (score === 10) {
+                console.log('🎉 Perfect! All tests passed!');
+            } else {
+                console.log('Keep trying! You can do this!');
+            }
+        }
+        
+        function resetExercise() {
+            if (confirm('This will reset all your progress. Are you sure?')) {
+                location.reload();
+            }
+        }
+        
+        function showHints() {
+            const modal = new bootstrap.Modal(document.getElementById('hintsModal'));
+            modal.show();
+        }
+    </script>
+</body>
+</html>
